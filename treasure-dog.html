@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='styles.css' rel="stylesheet"/>
+    <title>Gift Box</title>
+</head>
+
+<header class="subtitle-color" style="margin-bottom: 600px;">what's this? :0</header>
+
+<body class="box-container">
+    <div class="content">
+        <div class="box">
+            <div class="box-body">
+                <div class="box-lid">
+                    <div class="box-bowtie"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const boxBody = document.querySelector('.box-body');
+        let isHovering = false;
+        let alertShown = false;
+
+        boxBody.addEventListener('mouseenter', () => {
+            isHovering = true;
+            setTimeout(() => {
+                if (isHovering && !alertShown) {
+                    alert("you got a....letter..?");
+                    alertShown = true;
+                    window.location.href = 'letter-dog.html'
+                }
+            }, 1000); // Adjust this time to match your CSS animation duration
+        });
+
+        boxBody.addEventListener('mouseleave', () => {
+            isHovering = false;
+        });
+    </script>
+</body>
+</html>

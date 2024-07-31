@@ -84,7 +84,7 @@ function checkPuzzleCompletion() {
     if (JSON.stringify(currentOrder) === JSON.stringify(correctOrder)) {
         setTimeout(() => {
             alert("good job my love ❤️");
-            window.location.href = 'treasure-dog.html'; 
+            window.location.href = 'treasure-cat.html'; 
         }, 100);
     }
 }
